@@ -3,7 +3,8 @@ import './App.css';
 // import Name from './01/Name';
 import { FcHome } from "react-icons/fc";
 // import MyDiv1 from './03/MyDiv1';
-import MyList from './04/MyList';
+// import MyList from './04/MyList';
+import Lotto from './05/Lotto';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
                         flex flex-col justify-center items-center
                         overflow-y-auto bg-slate-200'>
                           {/* <MyDiv1 /> */}
-                          <MyList />
+                          {/* <MyList /> */}
+                          <Lotto />
       </main>
       <footer className='w-full h-20
                           flex justify-center items-center

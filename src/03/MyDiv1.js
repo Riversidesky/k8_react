@@ -14,6 +14,7 @@ export default function MyDiv1() {
                     text-2xl font-bold bg-fuchsia-800 text-white">
       <p className="w-full h-10 pl-6 flex justify-start items-center">{d1}</p>    
       <MyDiv2 dn1={d1} dn2={d2} dn3={d3}/>
+      
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import MyDiv3 from "./MyDiv3"
 
 // export default function MyDiv2(probs) {
-export default function MyDiv2({dn1, dn2, dn3}) { // {}는 object 기호, console.log(probs)
+export default function MyDiv2({dn1, dn2, dn3}) { // {}는 object 기호 까먹지않게, console.log(probs)
   return (
     <div className="w-4/6 h-3/6
                     flex flex-col justify-center items-center
