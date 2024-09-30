@@ -9,7 +9,7 @@ function MyClockTime () {
             setCTime(new Date())
         }, 1000) //1초에 한번씩
 
-        return clearInterval(tm);
+        return () => clearInterval(tm);
     }, []);
 
     // let today = new Date();
