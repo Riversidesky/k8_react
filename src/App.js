@@ -5,8 +5,9 @@ import { FcHome } from "react-icons/fc";
 // import MyDiv1 from './03/MyDiv1';
 // import MyList from './04/MyList';
 // import Lotto from './05/Lotto';
-import FoodMain from './06/FoodMain';
-import MyClock from './02/MyClock';
+//import FoodMain from './06/FoodMain';
+//import MyClock from './02/MyClock';
+import BoxOffice from './07/BoxOffice';
 
 function App() {
   return (
@@ -23,10 +24,11 @@ function App() {
                         flex flex-col items-center
                         overflow-y-auto bg-slate-200'>
                           {/* <MyDiv1 /> */}
-                          <MyClock />
+                          {/* <MyClock /> */}
                           {/* <MyList /> */}
                           {/* <Lotto /> */}
                           {/* <FoodMain /> */}
+                          <BoxOffice />
                           
       </main>
       <footer className='w-full h-20
