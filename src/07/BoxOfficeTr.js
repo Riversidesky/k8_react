@@ -1,5 +1,5 @@
 
-export default function BoxOfficeTr({mv, handleClick}) {
+export default function BoxOfficeTr({mv, handleClick}) { // props로 받으면 mv, handleClick이 obj로 받아져서(중괄호필수) props.mv , props.handleClick 처럼 쓸수있음 jsx에서 중괄호안은 무조건 자바스크립트
   const inten = () => {
     if (mv.rankInten > 0) return <><span className="text-red-600">↑</span><span>{mv.rankInten}</span></>
     else if(mv.rankInten == 0) return <span>-</span>
@@ -18,7 +18,7 @@ export default function BoxOfficeTr({mv, handleClick}) {
                     {parseInt(mv.salesAcc).toLocaleString()}원 {/* 쉼표 붙이기 - int처리 */}
                 </td>
                 <td className="px-6 py-4 text-right">
-                    {parseInt(mv.audiAcc).toLocaleString()}명 
+                    {parseInt(mv.audiCnt).toLocaleString()}명 
                 </td>
                 <td className="px-6 py-4 text-center">
                     {/* {inten()} */}

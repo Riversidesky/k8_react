@@ -7,7 +7,10 @@ import { FcHome } from "react-icons/fc";
 // import Lotto from './05/Lotto';
 //import FoodMain from './06/FoodMain';
 //import MyClock from './02/MyClock';
-import BoxOffice from './07/BoxOffice';
+// import BoxOffice from './07/BoxOffice';
+import MyBox from './08/MyBox';
+
+
 
 function App() {
   return (
@@ -28,7 +31,8 @@ function App() {
                           {/* <MyList /> */}
                           {/* <Lotto /> */}
                           {/* <FoodMain /> */}
-                          <BoxOffice />
+                          {/* <BoxOffice /> */}
+                          <MyBox />
                           
       </main>
       <footer className='w-full h-20

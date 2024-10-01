@@ -2,17 +2,19 @@ import { useEffect, useState } from "react"
 import BoxOfficeTr from "./BoxOfficeTr";
 
 export default function BoxOffice() {
-   const[td, setTd] = useState([]);
+   const[td, setTd] = useState([]);  // useState = state변수 변하는거 감지
    const[tr, setTr] = useState([]);
+   const[info, setInfo] = useState([]);
 
-   const handleTrClick = () => {
-    
-    
+   const handleTrClick = (item) => {
+    console.log(item)
+    let tm = `[${item.movieCd}] ${item.movieNm} 개봉일 : ${item.openDt} 누적관객수 : ${parseInt(item.audiAcc).toLocaleString()}`
+    setInfo(tm)
    }
 
   const getFetchData = () => {
       const apiKey = process.env.REACT_APP_MV_KEY;
-      const dt = '20240928'
+      const dt = '20240929'
 
       let url = `https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?`
       url = `${url}key=${apiKey}&targetDt=${dt}`
@@ -27,12 +29,12 @@ export default function BoxOffice() {
   }
 
 
-  //맨처음 한번 실행
+  //맨처음 한번 실행 (배열안에 아무것도 없을때)
   useEffect(() => {
     getFetchData();
   }, []);
   
-  //fetch 데이터가 채워지면
+  //fetch 데이터가 채워지면 (배열안에값이 바뀔때마다 실행)
   useEffect(() => {
     console.log('td', td)
     let tm = td.map(item => <BoxOfficeTr mv = {item} key={item.movieCd} handleClick = {()=> handleTrClick(item)} />)
@@ -66,9 +68,14 @@ export default function BoxOffice() {
         <tbody>
             {tr}
         </tbody>
+        <tfoot>
+          <tr>
+            <td colSpan={5} className="bg-black text-white h-16 p-2 text-center">{info}</td>
+          </tr>
+        </tfoot>
     </table>
       </div>
-      <div className="w-full h-16 flex justify-center items-center text-white bg-black">innterHTML</div>
+      {/* <div className="w-full h-16 flex justify-center items-center text-white bg-black">innterHTML</div> */}
     </div>
   )
 }
