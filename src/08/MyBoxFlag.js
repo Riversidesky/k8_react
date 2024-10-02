@@ -25,12 +25,17 @@ export default function MyBoxFlag({color}) {
         'bg400' : 'bg-pink-400',
         'border500' : 'border-pink-500',
         'bg200' : 'bg-pink-200'
-    }
+    }  
   }
+
+  // const obj = colorObj[color];
+
+
+
   const [c, setC] = useState(false);
   const handleClick = () => {
     setC(!c)
-    console.log(colorObj['color'['bg400']])
+    // console.log(obj[['bg400']])
   }
 
 
@@ -39,9 +44,9 @@ useEffect(()=>{
   }, [c]) 
 
   return (
-        <div className={`w-4/5 h-4/5 m-10 flex flex-col justify-center items-center border border-slate-400 ${c ? colorObj['bg400'] : ''}`}>
+        <div className={`w-4/5 h-4/5 m-10 flex flex-col justify-center items-center border border-slate-400 ${c ? colorObj[color]['bg400'] : ''}`}>
             <button className="flex justify-center items-center text-2xl w-1/2 m-3 p-5 border border-slate-400 rounded-md bg-slate-200">{upC}</button>
-            <button className={`flex justify-center items-center w-1/3 m-3 p-5 ${colorObj['bg200']} border ${colorObj['border500']} rounded-md`} onClick={handleClick}>{upC} Toggle</button>
+            <button className={`flex justify-center items-center w-1/3 m-3 p-5 ${colorObj[color]['bg200']} border ${colorObj[color]['border500']} rounded-md`} onClick={handleClick}>{upC} Toggle</button>
         </div>
   )
 }
