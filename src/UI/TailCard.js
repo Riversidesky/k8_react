@@ -2,13 +2,13 @@
 export default function TailCard({imgUrl, title, content, kw}) {
     // kw.split(',').map()
     const kwArr = kw.includes(',') ? kw.split(',') : [kw] 
-    const tag = (kwArr.length != 0) ? kwArr.map(item => <span key={item} className="inline-flex bg-slate-400 p-1 m-2 rounded-xl">{item}</span>) : console.log("빈배열")
+    const tag = (kwArr.length !== 0) ? kwArr.map(item => <span key={item} className="inline-flex bg-slate-400 p-1 m-2 rounded-xl">{item}</span>) : console.log("빈배열")
     console.log('kwArr', kwArr)
     console.log('tag', tag)
 
     return (
         <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-            <img className="rounded-t-lg" src={imgUrl} alt="" />
+            <img className="rounded-t-lg w-full h-60" src={imgUrl} alt="" />
             <div className="p-5">
                 <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                     {title}</h1>
