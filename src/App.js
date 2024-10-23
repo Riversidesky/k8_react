@@ -17,6 +17,10 @@ import Traffic from './09/Traffic';
 import Gallery from './11/Gallery';
 import Festival from './12/Festival';
 // import RouteMain from './13/RouteMain';
+import Fcst from './14/Fcst';
+import FcstList from './14/FcstList';
+import RecoilMain from './15/RecoilMain';
+import Rest from './16/Rest';
 
 
 function App() {
@@ -31,13 +35,15 @@ function App() {
                             bg-indigo-400'>
             <p className='text-3xl font-bold text-fuchsia-950 p-5' >리액트 실습</p>
             <ul className='flex justify-center items-center text-xl font-semibold'>
-              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/시계'>시계</Link></li>
-              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/로또'>로또</Link></li>
-              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/푸드뱅크'>푸드뱅크</Link></li>
-              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/박스오피스'>박스오피스</Link></li>
-              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/교통사고'>교통사고</Link></li>
-              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/관광'>관광</Link></li>
-              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/축제'>축제</Link></li>
+              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/time'>시계</Link></li>
+              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/lotto'>로또</Link></li>
+              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/foodbank'>푸드뱅크</Link></li>
+              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/boxoffice'>박스오피스</Link></li>
+              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/traffic'>교통사고</Link></li>
+              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/gallery'>관광</Link></li>
+              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/festival'>축제</Link></li>
+              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/fcst'>일기예보</Link></li>
+              <li className='mx-2 p-2 hover:bg-indigo-500 rounded-md'><Link to='/rest'>실습</Link></li>
             </ul>
             <p className='p-5'><Link to='/'><FcHome className='w-14 h-14' /></Link></p>
             
@@ -47,17 +53,21 @@ function App() {
                           overflow-y-auto bg-slate-200'>
                             <Routes>                          
                               {/* <MyDiv1 /> */}
-                              <Route path='/시계' element={<MyClock />} />
+                              <Route path='/time' element={<MyClock />} />
                               {/* <MyList /> */}
-                              <Route path='/로또' element={<Lotto />} />
-                              <Route path='/푸드뱅크' element={<FoodMain />} />
-                              <Route path='/박스오피스' element={<BoxOffice />} />
+                              <Route path='/lotto' element={<Lotto />} />
+                              <Route path='/foodbank' element={<FoodMain />} />
+                              <Route path='/boxoffice' element={<BoxOffice />} />
                               {/* <MyBox /> */}
-                              <Route path='/교통사고' element={<Traffic />} />
+                              <Route path='/traffic' element={<Traffic />} />
                               {/* <MyRef /> */}
-                              <Route path='/관광' element={<Gallery />} />
-                              <Route path='/축제' element={<Festival />} />
+                              <Route path='/gallery' element={<Gallery />} />
+                              <Route path='/festival' element={<Festival />} />
                               {/* <RouteMain /> */}    
+                              <Route path='/fcst' element={<Fcst />} />
+                              <Route path='/fcstlist' element={<FcstList />} />
+                              <Route path='/recoil' element={<RecoilMain />} />
+                              <Route path='/rest' element={<Rest />} />
                             </Routes>       
         </main>
         <footer className='w-full h-20 flex-shrink-0
