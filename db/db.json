@@ -1,14 +1,9 @@
 {
   "posts": [
     {
-      "id": "1",
-      "body": "This is a comment1.",
-      "author": "이수민"
-    },
-    {
-      "id": "2",
-      "body": "This is a comment2.",
-      "author": "이수민2"
+      "body": "asdfdd",
+      "author": "asdfdd",
+      "id": "200f"
     }
   ],
   "comments": [
@@ -24,4 +19,3 @@
     }
   ]
 }
-
